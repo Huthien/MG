@@ -18,11 +18,11 @@
     </li>
     <li>
       <p>Added the player with basic movement on built.</p>
-      ![Screenshot 2024-11-11 160443](https://github.com/user-attachments/assets/4b8bf56f-6b63-4b93-8ad1-857bed22b27d)
+      <img src= "https://github.com/user-attachments/assets/4b8bf56f-6b63-4b93-8ad1-857bed22b27d" alt = "background template and the player" width = "300"/>
     </li>
     <li>
       <p>Added a main menu with two simple buttons and the template of the first level.</p>
-      ![Screenshot 2024-11-11 160411](https://github.com/user-attachments/assets/3875d5dd-7ce1-4979-a48e-ec8b87684d26)
+      <img src= "https://github.com/user-attachments/assets/3875d5dd-7ce1-4979-a48e-ec8b87684d26" alt = "main menu buttons" width = "300"/>
     </li>
   </ul>
 </div>
