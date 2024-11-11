@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://d0crrk2wfpalf"]
+[gd_scene load_steps=2 format=3 uid="uid://d0crrk2wfpalf"]
+
+[ext_resource type="Script" path="res://Scenes/Play.gd" id="1_buqml"]
 
 [node name="Main" type="Node2D"]
 
@@ -9,3 +11,13 @@ offset_right = 600.0
 offset_bottom = 327.0
 text = "MG!
 WELCOME!!"
+
+[node name="Play" type="Button" parent="."]
+offset_left = 575.0
+offset_top = 371.0
+offset_right = 616.0
+offset_bottom = 402.0
+text = "Play"
+script = ExtResource("1_buqml")
+
+[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
