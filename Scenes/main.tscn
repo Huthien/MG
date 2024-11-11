@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0crrk2wfpalf"]
+[gd_scene load_steps=9 format=3 uid="uid://d0crrk2wfpalf"]
 
-[ext_resource type="Script" path="res://Scenes/Play.gd" id="1_buqml"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_t1b3p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhhrm"]
 bg_color = Color(0.133333, 0.12549, 0.203922, 1)
@@ -10,6 +10,18 @@ border_width_right = 4
 border_width_bottom = 4
 border_color = Color(1, 1, 1, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16bey"]
+bg_color = Color(0.150905, 0.206685, 0.493744, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ln8c1"]
 bg_color = Color(0.133333, 0.12549, 0.203922, 1)
 border_width_left = 2
@@ -18,7 +30,30 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color(1, 1, 1, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8keen"]
+bg_color = Color(0.14902, 0.207843, 0.494118, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsvep"]
+bg_color = Color(0.333205, 0.432808, 0.834754, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sebbp"]
+bg_color = Color(0.14902, 0.207843, 0.494118, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vdphn"]
+bg_color = Color(0.333205, 0.432808, 0.834754, 1)
+
 [node name="Main" type="Node2D"]
+script = ExtResource("1_t1b3p")
 
 [node name="mainMenu" type="CanvasLayer" parent="."]
 
@@ -43,6 +78,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_16bey")
 text = "MG!
 "
 horizontal_alignment = 1
@@ -61,7 +97,27 @@ offset_bottom = 51.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8keen")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hsvep")
 text = "Play"
-script = ExtResource("1_buqml")
 
-[connection signal="pressed" from="mainMenu/Play" to="mainMenu/Play" method="_on_pressed"]
+[node name="Quit" type="Button" parent="mainMenu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = 68.0
+offset_right = 40.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sebbp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vdphn")
+text = "Quit
+"
+
+[connection signal="pressed" from="mainMenu/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="mainMenu/Quit" to="." method="_on_quit_pressed"]
