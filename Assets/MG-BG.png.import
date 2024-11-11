@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blohluuls54np"
-path="res://.godot/imported/MMG-BG.png-023fec357e151050e4671f9251f6d610.ctex"
+uid="uid://calaj6xyedjql"
+path="res://.godot/imported/MG-BG.png-c7cc5cc3060847daab28519a1154059e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/MMG-BG.png"
-dest_files=["res://.godot/imported/MMG-BG.png-023fec357e151050e4671f9251f6d610.ctex"]
+source_file="res://Assets/MG-BG.png"
+dest_files=["res://.godot/imported/MG-BG.png-c7cc5cc3060847daab28519a1154059e.ctex"]
 
 [params]
 
