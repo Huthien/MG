@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://ckqtnpfdj8x1t"]
+
+[ext_resource type="Texture2D" uid="uid://calaj6xyedjql" path="res://Assets/MG-BG.png" id="1_bd111"]
+[ext_resource type="PackedScene" uid="uid://kipriljf16q3" path="res://Scenes/player.tscn" id="2_ujskg"]
+[ext_resource type="Script" path="res://Scripts/Grid.gd" id="2_uo7sc"]
+[ext_resource type="PackedScene" uid="uid://dqtg0v2tiojpx" path="res://Scenes/Objects/coin.tscn" id="3_bdkr0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24lsj"]
+bg_color = Color(0.133333, 0.12549, 0.203922, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bg53"]
+texture = ExtResource("1_bd111")
+texture_region_size = Vector2i(36, 36)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, -18, 18, -18, 18, -14, -14, -13.75, -14, 18, -18, 18)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, -18, 18, -18, 18, -14, -18, -14)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(18, -18, 18, 18, 14, 18, 13.75, -14, -18, -14, -18, -18)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, 18, -18, -18, -14, -18, -14, 18)
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(18, -18, 18, 18, 14, 18, 14, -18)
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, 18, -18, -18, -14, -18, -13.75, 14, 18, 14, 18, 18)
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(18, 18, -18, 18, -18, 14, 18, 14)
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(18, 18, -18, 18, -18, 14, 14, 13.75, 14, -18, 18, -18)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_dn057"]
+tile_size = Vector2i(36, 36)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_7bg53")
+
+[node name="Coin Catcher" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_24lsj")
+
+[node name="Grid" type="TileMap" parent="."]
+position = Vector2(640, 368)
+tile_set = SubResource("TileSet_dn057")
+format = 2
+layer_0/tile_data = PackedInt32Array(-393225, 1, 0, -327689, 1, 1, -262153, 1, 1, -196617, 1, 1, -131081, 1, 1, -65545, 1, 1, -9, 1, 1, 65527, 1, 1, 131063, 1, 1, 196599, 1, 1, 262135, 1, 1, 327671, 1, 1, 393207, 1, 1, 458743, 1, 2, -393224, 65537, 0, 458744, 65537, 2, -393223, 65537, 0, 458745, 65537, 2, -393222, 65537, 0, 458746, 65537, 2, -393221, 65537, 0, 458747, 65537, 2, -393220, 65537, 0, 458748, 65537, 2, -393219, 65537, 0, 458749, 65537, 2, -393218, 65537, 0, 458750, 65537, 2, -393217, 65537, 0, 458751, 65537, 2, -458752, 65537, 0, 393216, 65537, 2, -458751, 65537, 0, 393217, 65537, 2, -458750, 65537, 0, 393218, 65537, 2, -458749, 65537, 0, 393219, 65537, 2, -458748, 65537, 0, 393220, 65537, 2, -458747, 65537, 0, 393221, 65537, 2, -458746, 65537, 0, 393222, 65537, 2, -458745, 65537, 0, 393223, 65537, 2, -458744, 131073, 0, -393208, 131073, 1, -327672, 131073, 1, -262136, 131073, 1, -196600, 131073, 1, -131064, 131073, 1, -65528, 131073, 1, 8, 131073, 1, 65544, 131073, 1, 131080, 131073, 1, 196616, 131073, 1, 262152, 131073, 1, 327688, 131073, 1, 393224, 131073, 2)
+script = ExtResource("2_uo7sc")
+
+[node name="Player" parent="." instance=ExtResource("2_ujskg")]
+position = Vector2(353, 580)
+
+[node name="Coin" parent="." instance=ExtResource("3_bdkr0")]
+position = Vector2(441, 466)

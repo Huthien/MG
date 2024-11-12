@@ -1,0 +1,90 @@
+[gd_scene load_steps=8 format=3 uid="uid://ckqtnpfdj8x1t"]
+
+[ext_resource type="Texture2D" uid="uid://calaj6xyedjql" path="res://Assets/MG-BG.png" id="1_bd111"]
+[ext_resource type="PackedScene" uid="uid://kipriljf16q3" path="res://Scenes/player.tscn" id="2_ujskg"]
+[ext_resource type="Script" path="res://Scripts/Grid.gd" id="2_uo7sc"]
+[ext_resource type="PackedScene" uid="uid://dqtg0v2tiojpx" path="res://Scenes/Objects/coin.tscn" id="3_bdkr0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24lsj"]
+bg_color = Color(0.133333, 0.12549, 0.203922, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bg53"]
+texture = ExtResource("1_bd111")
+texture_region_size = Vector2i(36, 36)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, -18, 18, -18, 18, -14, -14, -13.75, -14, 18, -18, 18)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, -18, 18, -18, 18, -14, -18, -14)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(18, -18, 18, 18, 14, 18, 13.75, -14, -18, -14, -18, -18)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, 18, -18, -18, -14, -18, -14, 18)
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(18, -18, 18, 18, 14, 18, 14, -18)
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, 18, -18, -18, -14, -18, -13.75, 14, 18, 14, 18, 18)
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(18, 18, -18, 18, -18, 14, 18, 14)
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(18, 18, -18, 18, -18, 14, 14, 13.75, 14, -18, 18, -18)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_dn057"]
+tile_size = Vector2i(36, 36)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_7bg53")
+
+[node name="Coin Catcher" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_24lsj")
+
+[node name="Grid" type="TileMap" parent="."]
+visible = false
+tile_set = SubResource("TileSet_dn057")
+format = 2
+script = ExtResource("2_uo7sc")
+
+[node name="Player" parent="." instance=ExtResource("2_ujskg")]
+position = Vector2(353, 580)
+
+[node name="Coin" parent="." instance=ExtResource("3_bdkr0")]
+position = Vector2(667, 582)
+
+[node name="Coin2" parent="." instance=ExtResource("3_bdkr0")]
+position = Vector2(791, 581)
+
+[node name="Coin3" parent="." instance=ExtResource("3_bdkr0")]
+position = Vector2(546, 580)

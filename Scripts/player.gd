@@ -2,8 +2,7 @@ extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 270.0
 var has_gravity = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -24,8 +23,6 @@ func _physics_process(delta):
 		if not is_on_floor():
 			velocity.y += gravity * delta
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction_x = Input.get_axis("Left", "Right")
 	var direction_y = Input.get_axis("Up", "Down")
 	if direction_x:

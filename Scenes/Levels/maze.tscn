@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpeh10prdgign"]
+
+[ext_resource type="Texture2D" uid="uid://cg2xou413urlc" path="res://Assets/block_tile.png" id="1_8fcyc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8tegu"]
+bg_color = Color(0.133333, 0.12549, 0.203922, 1)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_4mhu8"]
+tile_data = PackedInt32Array(0, 6, 0, 65536, 6, 1, 131072, 6, 1, 196608, 6, 1, 262144, 6, 1, 327680, 6, 1, 393216, 6, 1, 458752, 6, 1, 524288, 6, 1, 589824, 6, 1, 655360, 6, 1, 720896, 6, 1, 786432, 6, 2, 1, 65542, 0, 786433, 65542, 2, 2, 65542, 0, 786434, 65542, 2, 3, 65542, 0, 786435, 65542, 2, 4, 65542, 0, 786436, 65542, 2, 5, 65542, 0, 786437, 65542, 2, 6, 65542, 0, 786438, 65542, 2, 7, 65542, 0, 786439, 65542, 2, 8, 65542, 0, 786440, 65542, 2, 9, 65542, 0, 786441, 65542, 2, 10, 65542, 0, 786442, 65542, 2, 11, 65542, 0, 786443, 65542, 2, 12, 65542, 0, 786444, 65542, 2, 13, 65542, 0, 786445, 65542, 2, 14, 65542, 0, 786446, 65542, 2, 15, 65542, 0, 786447, 65542, 2, 16, 65542, 0, 786448, 65542, 2, 17, 65542, 0, 786449, 65542, 2, 18, 131078, 0, 65554, 131078, 1, 131090, 131078, 1, 196626, 131078, 1, 262162, 131078, 1, 327698, 131078, 1, 393234, 131078, 1, 458770, 131078, 1, 524306, 131078, 1, 589842, 131078, 1, 655378, 131078, 1, 720914, 131078, 1, 786450, 131078, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uly82"]
+texture = ExtResource("1_8fcyc")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_h7rcq"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_uly82")
+pattern_0 = SubResource("TileMapPattern_4mhu8")
+
+[node name="Maze" type="Node2D"]
+
+[node name="BackgroundColor" type="Panel" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_8tegu")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(934, 518)
+tile_set = SubResource("TileSet_h7rcq")
+format = 2
