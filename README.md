@@ -8,6 +8,20 @@
 ##
 
 <div>
+  <p>Date: 12/11/2024</p>
+  <ul>
+    <li>
+      <p>Added simple coins with an AnimatedSprite2D node</p>
+    </li>
+    <li>
+      <p>Made two level templates for a maze, and a coin catcher (im still working on that cause nothing worked yet 🤡)</p>
+    </li>
+  </ul>
+</div>
+
+##
+
+<div>
   <p>Date: 11/11/2024</p>
   <ul>
     <li>
@@ -29,16 +43,6 @@
 
 ##
 
-<div>
-  <p>Date: 12/11/2024</p>
-  <ul>
-    <li>
-      <p>Added simple coins with an AnimatedSprite2D node</p>
-    </li>
-    <li>
-      <p>Made two level templates for a maze, and a coin catcher (im still working on that cause nothing worked yet 🤡)</p>
-    </li>
-  </ul>
-</div>
+
 
 
