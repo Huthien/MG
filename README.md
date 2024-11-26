@@ -8,6 +8,21 @@
 ##
 
 <div>
+  <p>Date: 26/11/2024</p>
+  <ul>
+    <li>
+      <p>Added a coin spawner with random positions on screen. It resets when the timer is on timeout and coins changes positions</p>
+      <img src= "https://github.com/user-attachments/assets/10259746-fd52-4eb3-9b30-efa4d92b0783" alt = "coin-catcher spawner and timer" width = "300"/>
+    </li>
+    <li>
+      <p>Added a timer to set an objective for catching the coins</p>
+    </li>
+  </ul>
+</div>
+
+##
+
+<div>
   <p>Date: 12/11/2024</p>
   <ul>
     <li>
@@ -42,6 +57,10 @@
 </div>
 
 ##
+
+
+
+
 
 
 
