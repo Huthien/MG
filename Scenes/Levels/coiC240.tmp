@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://ckqtnpfdj8x1t"]
+[gd_scene load_steps=10 format=3 uid="uid://ckqtnpfdj8x1t"]
 
 [ext_resource type="Script" path="res://Scripts/coin_catcher.gd" id="1_k6eis"]
 [ext_resource type="Texture2D" uid="uid://cd3bbdeblgsjp" path="res://Assets/MMG-BG.png" id="2_gjfgx"]
 [ext_resource type="PackedScene" uid="uid://kipriljf16q3" path="res://Scenes/player.tscn" id="2_ujskg"]
 [ext_resource type="Script" path="res://Scripts/spawner.gd" id="2_uo7sc"]
+[ext_resource type="PackedScene" uid="uid://dqtg0v2tiojpx" path="res://Scenes/Objects/coin.tscn" id="3_bdkr0"]
 [ext_resource type="Texture2D" uid="uid://cg2xou413urlc" path="res://Assets/block_tile.png" id="3_jv6u0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gril5"]
@@ -56,7 +57,7 @@ script = ExtResource("1_k6eis")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 15.0
+wait_time = 30.0
 one_shot = true
 autostart = true
 
@@ -85,7 +86,16 @@ layer_1/name = "CoinSpawn"
 layer_1/tile_data = PackedInt32Array()
 
 [node name="Player" parent="." instance=ExtResource("2_ujskg")]
-position = Vector2(608, 608)
+position = Vector2(353, 580)
+
+[node name="Coin" parent="." instance=ExtResource("3_bdkr0")]
+position = Vector2(667, 582)
+
+[node name="Coin2" parent="." instance=ExtResource("3_bdkr0")]
+position = Vector2(791, 581)
+
+[node name="Coin3" parent="." instance=ExtResource("3_bdkr0")]
+position = Vector2(546, 580)
 
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource("2_uo7sc")
