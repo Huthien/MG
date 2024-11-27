@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://d0crrk2wfpalf"]
+[gd_scene load_steps=10 format=3 uid="uid://d0crrk2wfpalf"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_t1b3p"]
+[ext_resource type="Script" path="res://Scripts/TitleIcon.gd" id="2_h3337"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhhrm"]
 bg_color = Color(0.133333, 0.12549, 0.203922, 1)
@@ -10,17 +11,18 @@ border_width_right = 4
 border_width_bottom = 4
 border_color = Color(1, 1, 1, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ry5hs"]
-bg_color = Color(0.14902, 0.207843, 0.494118, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16bey"]
+bg_color = Color(0.150905, 0.206685, 0.493744, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
-border_width_bottom = 8
+border_width_bottom = 10
 border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+anti_aliasing_size = 0.01
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ln8c1"]
 bg_color = Color(0.133333, 0.12549, 0.203922, 1)
@@ -79,25 +81,31 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_yhhrm")
 
-[node name="Title" type="Label" parent="mainMenu"]
+[node name="TitlePos" type="Marker2D" parent="mainMenu"]
+position = Vector2(640, 304)
+
+[node name="TitleIcon" type="Label" parent="mainMenu/TitlePos"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -50.0
-offset_top = -110.0
+offset_top = -272.0
 offset_right = 50.0
-offset_bottom = -10.0
+offset_bottom = -172.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxFlat_ry5hs")
-text = "MG!"
+pivot_offset = Vector2(50, 50)
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_16bey")
+text = "MG!
+"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("2_h3337")
+metadata/_edit_use_anchors_ = true
 
 [node name="Play" type="Button" parent="mainMenu"]
 anchors_preset = 8
