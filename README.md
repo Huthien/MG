@@ -8,6 +8,20 @@
 ##
 
 <div>
+  <p>Date: 28/11/2024</p>
+  <ul>
+    <li>
+      <p>Added animation for the game logo</p>
+    </li>
+    <li>
+      <p>Added buttons for level selector and "randomize!" mode</p>
+    </li>
+  </ul>
+</div>
+
+##
+
+<div>
   <p>Date: 26/11/2024</p>
   <ul>
     <li>
