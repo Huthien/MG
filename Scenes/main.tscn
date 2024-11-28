@@ -1,6 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://d0crrk2wfpalf"]
+[gd_scene load_steps=14 format=3 uid="uid://d0crrk2wfpalf"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_t1b3p"]
+[ext_resource type="Script" path="res://Scripts/play_button.gd" id="2_23wi1"]
+[ext_resource type="Texture2D" uid="uid://bd5kkysc3xmm5" path="res://MG!_logo.png" id="3_p727j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhhrm"]
 bg_color = Color(0.133333, 0.12549, 0.203922, 1)
@@ -9,18 +11,6 @@ border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
 border_color = Color(1, 1, 1, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ry5hs"]
-bg_color = Color(0.14902, 0.207843, 0.494118, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 8
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ln8c1"]
 bg_color = Color(0.133333, 0.12549, 0.203922, 1)
@@ -48,6 +38,15 @@ corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsvep"]
 bg_color = Color(0.333205, 0.432808, 0.834754, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sebbp"]
 bg_color = Color(0.14902, 0.207843, 0.494118, 1)
@@ -64,12 +63,79 @@ corner_radius_bottom_left = 4
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vdphn"]
 bg_color = Color(0.333205, 0.432808, 0.834754, 1)
 
+[sub_resource type="Curve2D" id="Curve2D_fns03"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 200)
+}
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_votq0"]
+resource_name = "move"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ao74u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_as6lb"]
+_data = {
+"RESET": SubResource("Animation_ao74u"),
+"move": SubResource("Animation_votq0")
+}
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_t1b3p")
 
 [node name="mainMenu" type="CanvasLayer" parent="."]
 
-[node name="background" type="Panel" parent="mainMenu"]
+[node name="Background" type="Panel" parent="mainMenu"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -78,65 +144,129 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_yhhrm")
+metadata/_edit_use_anchors_ = true
 
-[node name="Title" type="Label" parent="mainMenu"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -50.0
-offset_top = -110.0
-offset_right = 50.0
-offset_bottom = -10.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxFlat_ry5hs")
-text = "MG!"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Buttons" type="Node" parent="mainMenu"]
 
-[node name="Play" type="Button" parent="mainMenu"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -39.0
-offset_top = 26.0
-offset_right = 41.0
-offset_bottom = 57.0
+[node name="Play" type="Button" parent="mainMenu/Buttons"]
+anchors_preset = -1
+anchor_left = 0.469531
+anchor_top = 0.536111
+anchor_right = 0.532031
+anchor_bottom = 0.579167
+offset_left = -1.0
+offset_top = -2.0
+offset_right = -1.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8keen")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hsvep")
+toggle_mode = true
+action_mode = 0
+keep_pressed_outside = true
 text = "Play"
+script = ExtResource("2_23wi1")
+metadata/_edit_use_anchors_ = true
 
-[node name="Quit" type="Button" parent="mainMenu"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -39.0
-offset_top = 74.0
-offset_right = 41.0
-offset_bottom = 105.0
+[node name="Randomize" type="Button" parent="mainMenu/Buttons"]
+anchors_preset = -1
+anchor_left = 0.469531
+anchor_top = 0.536111
+anchor_right = 0.532031
+anchor_bottom = 0.579167
+offset_left = -209.0
+offset_top = -2.0
+offset_right = -169.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8keen")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hsvep")
+text = "Randomize!
+"
+
+[node name="Level Selector" type="Button" parent="mainMenu/Buttons"]
+anchors_preset = -1
+anchor_left = 0.469531
+anchor_top = 0.536111
+anchor_right = 0.532031
+anchor_bottom = 0.579167
+offset_left = 167.0
+offset_top = -2.0
+offset_right = 207.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8keen")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hsvep")
+text = "Level Selector"
+
+[node name="Quit" type="Button" parent="mainMenu/Buttons"]
+anchors_preset = -1
+anchor_left = 0.469531
+anchor_top = 0.602778
+anchor_right = 0.532031
+anchor_bottom = 0.645833
+offset_left = -1.0
+offset_top = -2.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sebbp")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vdphn")
 text = "Quit
 "
+metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="mainMenu/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="mainMenu/Quit" to="." method="_on_quit_pressed"]
+[node name="Title" type="Control" parent="mainMenu"]
+layout_mode = 3
+anchor_left = 0.5
+anchor_top = 0.111
+anchor_right = 0.5
+anchor_bottom = 0.111
+offset_top = 0.0799942
+offset_bottom = 0.0799942
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="TitlePath" type="Path2D" parent="mainMenu/Title"]
+curve = SubResource("Curve2D_fns03")
+
+[node name="TitleIcon" type="PathFollow2D" parent="mainMenu/Title/TitlePath"]
+rotation = 1.5708
+
+[node name="Sprite2D" type="Sprite2D" parent="mainMenu/Title/TitlePath/TitleIcon"]
+texture = ExtResource("3_p727j")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="mainMenu/Title/TitlePath/TitleIcon"]
+libraries = {
+"": SubResource("AnimationLibrary_as6lb")
+}
+autoplay = "move"
+
+[connection signal="pressed" from="mainMenu/Buttons/Play" to="mainMenu/Buttons/Play" method="_on_pressed"]
+[connection signal="pressed" from="mainMenu/Buttons/Level Selector" to="." method="_on_level_selector_pressed"]
+[connection signal="pressed" from="mainMenu/Buttons/Quit" to="." method="_on_quit_pressed"]
