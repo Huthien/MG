@@ -14,8 +14,10 @@
       <p>Added animation for the game logo</p>
     </li>
     <li>
-      <p>Added buttons for level selector and "randomize!" mode</p>
+      <p>Added buttons for level selector, "randomize!" mode, options, credits, and quit with movement animation! 🌠</p>
+      <img src= "https://github.com/user-attachments/assets/0b912ea1-46c8-4d37-bdf3-ece712d55f1e" alt = "main menu buttons" width = "300"/>
     </li>
+    <p>Im still working on new level designs for the game, so keep an eye! My main objective is to being able to make a simple game with minigames in it that will help me learn how Godot works 👾</p>
   </ul>
 </div>
 
