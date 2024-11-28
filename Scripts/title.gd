@@ -1,16 +1,63 @@
-extends PathFollow2D
+extends Button
 
-@onready var title_pos = $"../titlePos"
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var has_gravity = true
-var velocity: Vector2 = Vector2.ZERO
+@onready var play = $"../../../Buttons/Play"
+@onready var options = $"../../../Buttons/Options"
+@onready var credits = $"../../../Buttons/Credits"
+@onready var quit = $"../../../Buttons/Quit"
 
+@onready var title_anim = $"../title_anim"
+@onready var play_anim = $"../../../Buttons/Play/play_anim"
+@onready var opt_anim = $"../../../Buttons/Options/opt_anim"
+@onready var cred_anim = $"../../../Buttons/Credits/cred_anim"
+@onready var quit_anim = $"../../../Buttons/Quit/quit_anim"
+
+# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	disabled = true
+	title_courutine()
+	play.hide()
+	options.hide()
+	credits.hide()
+	quit.hide()
+	toggle_mode = false
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if has_gravity && self.position.y != title_pos.position.y:
-		velocity.y += gravity * delta
-	else: has_gravity = false
+func title_courutine():
+	await title_anim.animation_finished
+	disabled = false
 
+func _on_pressed():
+	if !toggle_mode:
+		play.visible = true
+		options.visible = true
+		credits.visible = true
+		quit.visible = true
+	
+		play_anim.play("move")
+		opt_anim.play("move")
+		cred_anim.play("move")
+		quit_anim.play("move")
+		
+		toggle_mode = true
+	else:
+		button_courutine()
+		toggle_mode = false
+
+func button_courutine():
+	play_anim.play_backwards("move")
+	opt_anim.play_backwards("move")
+	cred_anim.play_backwards("move")
+	quit_anim.play_backwards("move")
+	
+	await play_anim.animation_finished
+	await opt_anim.animation_finished
+	await cred_anim.animation_finished
+	await quit_anim.animation_finished
+	
+	play.hide()
+	play.random_level.hide()
+	play.level_selector.hide()
+	play.toggle_mode = false
+	
+	options.hide()
+	credits.hide()
+	quit.hide()

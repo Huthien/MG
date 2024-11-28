@@ -1,9 +1,8 @@
-[gd_scene load_steps=37 format=3 uid="uid://d0crrk2wfpalf"]
+[gd_scene load_steps=23 format=3 uid="uid://d0crrk2wfpalf"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_t1b3p"]
 [ext_resource type="Script" path="res://Scripts/play_button.gd" id="2_23wi1"]
 [ext_resource type="Texture2D" uid="uid://cibhi0kt8kf05" path="res://MG!_logo_nb.png" id="2_m5xdw"]
-[ext_resource type="Script" path="res://Scripts/title.gd" id="3_8ymd6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhhrm"]
 bg_color = Color(0.133333, 0.12549, 0.203922, 1)
@@ -15,7 +14,7 @@ border_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Curve2D" id="Curve2D_fns03"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 272)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 200)
 }
 point_count = 2
 
@@ -51,19 +50,6 @@ border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-anti_aliasing = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y56w8"]
-bg_color = Color(0.14902, 0.207843, 0.494118, 0)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 12
 border_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
@@ -181,7 +167,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-104, 0.00012207), Vector2(-120, 0.00012207)]
+"values": [Vector2(472, 384), Vector2(456, 384)]
 }
 
 [sub_resource type="Animation" id="Animation_5gn48"]
@@ -218,7 +204,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(88.0003, 9.15527e-05), Vector2(104, 9.15527e-05)]
+"values": [Vector2(688, 384), Vector2(704, 384)]
 }
 
 [sub_resource type="Animation" id="Animation_7hsgb"]
@@ -242,43 +228,6 @@ _data = {
 "move": SubResource("Animation_g2d2k")
 }
 
-[sub_resource type="Animation" id="Animation_0v43k"]
-resource_name = "move"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(600, 240), Vector2(600, 224)]
-}
-
-[sub_resource type="Animation" id="Animation_rekdm"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(600, 240)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_8hfrh"]
-_data = {
-"RESET": SubResource("Animation_rekdm"),
-"move": SubResource("Animation_0v43k")
-}
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sebbp"]
 bg_color = Color(0.14902, 0.207843, 0.494118, 1)
 border_width_left = 2
@@ -293,117 +242,6 @@ corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vdphn"]
 bg_color = Color(0.333205, 0.432808, 0.834754, 1)
-
-[sub_resource type="Animation" id="Animation_nfdow"]
-resource_name = "move"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(712, 328), Vector2(728, 328)]
-}
-
-[sub_resource type="Animation" id="Animation_u5fro"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(712, 328)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0w8q6"]
-_data = {
-"RESET": SubResource("Animation_u5fro"),
-"move": SubResource("Animation_nfdow")
-}
-
-[sub_resource type="Animation" id="Animation_a71bn"]
-resource_name = "move"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(488, 328), Vector2(472, 328)]
-}
-
-[sub_resource type="Animation" id="Animation_inml0"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(480, 328)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_q63aa"]
-_data = {
-"RESET": SubResource("Animation_inml0"),
-"move": SubResource("Animation_a71bn")
-}
-
-[sub_resource type="Animation" id="Animation_j00in"]
-resource_name = "move"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(600, 432), Vector2(600, 448)]
-}
-
-[sub_resource type="Animation" id="Animation_wniqn"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(600, 432)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wcu6i"]
-_data = {
-"RESET": SubResource("Animation_wniqn"),
-"move": SubResource("Animation_j00in")
-}
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_t1b3p")
@@ -445,18 +283,15 @@ size_flags_vertical = 4
 focus_mode = 0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
-theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_5fs4x")
 theme_override_styles/hover = SubResource("StyleBoxFlat_te3f0")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rtq54")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_y56w8")
 toggle_mode = true
 action_mode = 0
 icon = ExtResource("2_m5xdw")
 icon_alignment = 1
-script = ExtResource("3_8ymd6")
 
-[node name="title_anim" type="AnimationPlayer" parent="mainMenu/TitlePath/TitleIcon"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="mainMenu/TitlePath/TitleIcon"]
 libraries = {
 "": SubResource("AnimationLibrary_as6lb")
 }
@@ -470,10 +305,10 @@ anchor_left = 0.5
 anchor_top = 0.556
 anchor_right = 0.5
 anchor_bottom = 0.556
-offset_left = -40.0
-offset_top = -160.32
-offset_right = 40.0
-offset_bottom = -128.32
+offset_left = -40.0003
+offset_top = -16.3201
+offset_right = 39.9997
+offset_bottom = 15.6802
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(40.0003, 16.0001)
@@ -546,68 +381,7 @@ libraries = {
 "": SubResource("AnimationLibrary_a06br")
 }
 
-[node name="play_anim" type="AnimationPlayer" parent="mainMenu/Buttons/Play"]
-libraries = {
-"": SubResource("AnimationLibrary_8hfrh")
-}
-
 [node name="Options" type="Button" parent="mainMenu/Buttons"]
-anchors_preset = -1
-anchor_left = 0.469531
-anchor_top = 0.602778
-anchor_right = 0.532031
-anchor_bottom = 0.645833
-offset_left = 111.0
-offset_top = -106.0
-offset_right = 111.0
-offset_bottom = -105.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-focus_mode = 0
-mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_sebbp")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_vdphn")
-text = "Options
-"
-metadata/_edit_use_anchors_ = true
-
-[node name="opt_anim" type="AnimationPlayer" parent="mainMenu/Buttons/Options"]
-libraries = {
-"": SubResource("AnimationLibrary_0w8q6")
-}
-
-[node name="Credits" type="Button" parent="mainMenu/Buttons"]
-anchors_preset = -1
-anchor_left = 0.469531
-anchor_top = 0.602778
-anchor_right = 0.532031
-anchor_bottom = 0.645833
-offset_left = -121.0
-offset_top = -106.0
-offset_right = -121.0
-offset_bottom = -105.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-focus_mode = 0
-mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_sebbp")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_vdphn")
-text = "Credits
-"
-metadata/_edit_use_anchors_ = true
-
-[node name="cred_anim" type="AnimationPlayer" parent="mainMenu/Buttons/Credits"]
-libraries = {
-"": SubResource("AnimationLibrary_q63aa")
-}
-
-[node name="Quit" type="Button" parent="mainMenu/Buttons"]
 anchors_preset = -1
 anchor_left = 0.469531
 anchor_top = 0.602778
@@ -626,16 +400,56 @@ mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sebbp")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vdphn")
+text = "Options
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Credits" type="Button" parent="mainMenu/Buttons"]
+anchors_preset = -1
+anchor_left = 0.469531
+anchor_top = 0.602778
+anchor_right = 0.532031
+anchor_bottom = 0.645833
+offset_left = -0.999695
+offset_top = 45.9998
+offset_right = -0.999695
+offset_bottom = 46.9998
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sebbp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vdphn")
+text = "Credits
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="Button" parent="mainMenu/Buttons"]
+anchors_preset = -1
+anchor_left = 0.469531
+anchor_top = 0.602778
+anchor_right = 0.532031
+anchor_bottom = 0.645833
+offset_left = -0.999695
+offset_top = 93.9998
+offset_right = -0.999695
+offset_bottom = 94.9998
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sebbp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vdphn")
 text = "Quit
 "
 metadata/_edit_use_anchors_ = true
 
-[node name="quit_anim" type="AnimationPlayer" parent="mainMenu/Buttons/Quit"]
-libraries = {
-"": SubResource("AnimationLibrary_wcu6i")
-}
-
-[connection signal="pressed" from="mainMenu/TitlePath/TitleIcon/Title" to="mainMenu/TitlePath/TitleIcon/Title" method="_on_pressed"]
 [connection signal="pressed" from="mainMenu/Buttons/Play" to="mainMenu/Buttons/Play" method="_on_pressed"]
 [connection signal="pressed" from="mainMenu/Buttons/Play/Level Selector" to="." method="_on_level_selector_pressed"]
 [connection signal="pressed" from="mainMenu/Buttons/Quit" to="." method="_on_quit_pressed"]
