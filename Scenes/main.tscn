@@ -158,15 +158,30 @@ corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsvep"]
 bg_color = Color(0.333205, 0.432808, 0.834754, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
 border_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
+
+[sub_resource type="Animation" id="Animation_5gn48"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(392, 384)]
+}
 
 [sub_resource type="Animation" id="Animation_e63ff"]
 resource_name = "move"
@@ -184,7 +199,13 @@ tracks/0/keys = {
 "values": [Vector2(-104, 0.00012207), Vector2(-120, 0.00012207)]
 }
 
-[sub_resource type="Animation" id="Animation_5gn48"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m754e"]
+_data = {
+"RESET": SubResource("Animation_5gn48"),
+"move": SubResource("Animation_e63ff")
+}
+
+[sub_resource type="Animation" id="Animation_7hsgb"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -196,13 +217,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(392, 384)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_m754e"]
-_data = {
-"RESET": SubResource("Animation_5gn48"),
-"move": SubResource("Animation_e63ff")
+"values": [Vector2(768, 384)]
 }
 
 [sub_resource type="Animation" id="Animation_g2d2k"]
@@ -221,7 +236,13 @@ tracks/0/keys = {
 "values": [Vector2(88.0003, 9.15527e-05), Vector2(104, 9.15527e-05)]
 }
 
-[sub_resource type="Animation" id="Animation_7hsgb"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a06br"]
+_data = {
+"RESET": SubResource("Animation_7hsgb"),
+"move": SubResource("Animation_g2d2k")
+}
+
+[sub_resource type="Animation" id="Animation_rekdm"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -233,13 +254,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(768, 384)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_a06br"]
-_data = {
-"RESET": SubResource("Animation_7hsgb"),
-"move": SubResource("Animation_g2d2k")
+"values": [Vector2(600, 240)]
 }
 
 [sub_resource type="Animation" id="Animation_0v43k"]
@@ -256,21 +271,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(600, 240), Vector2(600, 224)]
-}
-
-[sub_resource type="Animation" id="Animation_rekdm"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(600, 240)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8hfrh"]
@@ -293,6 +293,30 @@ corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vdphn"]
 bg_color = Color(0.333205, 0.432808, 0.834754, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Animation" id="Animation_u5fro"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(712, 328)]
+}
 
 [sub_resource type="Animation" id="Animation_nfdow"]
 resource_name = "move"
@@ -310,7 +334,13 @@ tracks/0/keys = {
 "values": [Vector2(712, 328), Vector2(728, 328)]
 }
 
-[sub_resource type="Animation" id="Animation_u5fro"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0w8q6"]
+_data = {
+"RESET": SubResource("Animation_u5fro"),
+"move": SubResource("Animation_nfdow")
+}
+
+[sub_resource type="Animation" id="Animation_inml0"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -322,13 +352,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(712, 328)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0w8q6"]
-_data = {
-"RESET": SubResource("Animation_u5fro"),
-"move": SubResource("Animation_nfdow")
+"values": [Vector2(480, 328)]
 }
 
 [sub_resource type="Animation" id="Animation_a71bn"]
@@ -347,7 +371,13 @@ tracks/0/keys = {
 "values": [Vector2(488, 328), Vector2(472, 328)]
 }
 
-[sub_resource type="Animation" id="Animation_inml0"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q63aa"]
+_data = {
+"RESET": SubResource("Animation_inml0"),
+"move": SubResource("Animation_a71bn")
+}
+
+[sub_resource type="Animation" id="Animation_wniqn"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -359,13 +389,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(480, 328)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_q63aa"]
-_data = {
-"RESET": SubResource("Animation_inml0"),
-"move": SubResource("Animation_a71bn")
+"values": [Vector2(600, 432)]
 }
 
 [sub_resource type="Animation" id="Animation_j00in"]
@@ -382,21 +406,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(600, 432), Vector2(600, 448)]
-}
-
-[sub_resource type="Animation" id="Animation_wniqn"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(600, 432)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wcu6i"]
@@ -467,13 +476,13 @@ autoplay = "move"
 [node name="Play" type="Button" parent="mainMenu/Buttons"]
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.556
+anchor_top = 0.356
 anchor_right = 0.5
-anchor_bottom = 0.556
+anchor_bottom = 0.356
 offset_left = -40.0
-offset_top = -160.32
+offset_top = -16.32
 offset_right = 40.0
-offset_bottom = -128.32
+offset_bottom = 15.68
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(40.0003, 16.0001)
@@ -494,14 +503,14 @@ metadata/_edit_use_anchors_ = true
 [node name="Randomize" type="Button" parent="mainMenu/Buttons/Play"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.469531
-anchor_top = 0.536111
-anchor_right = 0.532031
-anchor_bottom = 0.579167
-offset_left = 354.437
-offset_top = 366.844
-offset_right = 444.437
-offset_bottom = 396.466
+anchor_left = -0.706
+anchor_top = 0.5
+anchor_right = -0.706
+anchor_bottom = 0.5
+offset_left = 448.48
+offset_top = 368.0
+offset_right = 543.48
+offset_bottom = 399.001
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -522,14 +531,14 @@ libraries = {
 [node name="Level Selector" type="Button" parent="mainMenu/Buttons/Play"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.469531
-anchor_top = 0.536111
-anchor_right = 0.532031
-anchor_bottom = 0.579167
-offset_left = 730.437
-offset_top = 366.844
-offset_right = 820.437
-offset_bottom = 396.466
+anchor_left = 1.7
+anchor_top = 0.484
+anchor_right = 1.7
+anchor_bottom = 0.484
+offset_left = 632.0
+offset_top = 368.512
+offset_right = 727.0
+offset_bottom = 399.513
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -553,14 +562,14 @@ libraries = {
 
 [node name="Options" type="Button" parent="mainMenu/Buttons"]
 anchors_preset = -1
-anchor_left = 0.469531
-anchor_top = 0.602778
-anchor_right = 0.532031
-anchor_bottom = 0.645833
-offset_left = 111.0
-offset_top = -106.0
-offset_right = 111.0
-offset_bottom = -105.0
+anchor_left = 0.587
+anchor_top = 0.478
+anchor_right = 0.587
+anchor_bottom = 0.478
+offset_left = -39.36
+offset_top = -16.16
+offset_right = 40.64
+offset_bottom = 15.8396
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -581,14 +590,14 @@ libraries = {
 
 [node name="Credits" type="Button" parent="mainMenu/Buttons"]
 anchors_preset = -1
-anchor_left = 0.469531
-anchor_top = 0.602778
-anchor_right = 0.532031
-anchor_bottom = 0.645833
-offset_left = -121.0
-offset_top = -106.0
-offset_right = -121.0
-offset_bottom = -105.0
+anchor_left = 0.406
+anchor_top = 0.478
+anchor_right = 0.406
+anchor_bottom = 0.478
+offset_left = -39.6801
+offset_top = -16.16
+offset_right = 40.3199
+offset_bottom = 15.8396
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -609,14 +618,14 @@ libraries = {
 
 [node name="Quit" type="Button" parent="mainMenu/Buttons"]
 anchors_preset = -1
-anchor_left = 0.469531
-anchor_top = 0.602778
-anchor_right = 0.532031
-anchor_bottom = 0.645833
-offset_left = -0.999695
-offset_top = -2.00018
-offset_right = -0.999695
-offset_bottom = -1.00018
+anchor_left = 0.5
+anchor_top = 0.622
+anchor_right = 0.5
+anchor_bottom = 0.622
+offset_left = -40.0
+offset_top = -15.84
+offset_right = 40.0
+offset_bottom = 16.1595
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
