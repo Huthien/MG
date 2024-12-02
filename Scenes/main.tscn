@@ -2,16 +2,10 @@
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_t1b3p"]
 [ext_resource type="Script" path="res://Scripts/play_button.gd" id="2_23wi1"]
+[ext_resource type="StyleBox" uid="uid://bhd1c1ldemmea" path="res://Assets/Styles/background.tres" id="2_68nti"]
 [ext_resource type="Texture2D" uid="uid://cibhi0kt8kf05" path="res://MG!_logo_nb.png" id="2_m5xdw"]
 [ext_resource type="Script" path="res://Scripts/title.gd" id="3_8ymd6"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhhrm"]
-bg_color = Color(0.133333, 0.12549, 0.203922, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(1, 1, 1, 1)
+[ext_resource type="StyleBox" uid="uid://bdorj6wkg3u71" path="res://Assets/Styles/Indigo_medium.tres" id="4_p76ye"]
 
 [sub_resource type="Curve2D" id="Curve2D_fns03"]
 _data = {
@@ -138,18 +132,6 @@ border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 6
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8keen"]
-bg_color = Color(0.14902, 0.207843, 0.494118, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
 border_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
@@ -427,8 +409,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_yhhrm")
-metadata/_edit_use_anchors_ = true
+theme_override_styles/panel = ExtResource("2_68nti")
 
 [node name="TitlePath" type="Path2D" parent="mainMenu"]
 position = Vector2(640, 80)
@@ -479,10 +460,10 @@ anchor_left = 0.5
 anchor_top = 0.356
 anchor_right = 0.5
 anchor_bottom = 0.356
-offset_left = -40.0
-offset_top = -16.32
-offset_right = 40.0
-offset_bottom = 15.68
+offset_left = 600.0
+offset_top = 240.0
+offset_right = 680.0
+offset_bottom = 272.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(40.0003, 16.0001)
@@ -491,26 +472,25 @@ size_flags_vertical = 4
 focus_mode = 0
 mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8keen")
+theme_override_styles/hover = ExtResource("4_p76ye")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hsvep")
 toggle_mode = true
 action_mode = 0
 keep_pressed_outside = true
 text = "Play"
 script = ExtResource("2_23wi1")
-metadata/_edit_use_anchors_ = true
 
 [node name="Randomize" type="Button" parent="mainMenu/Buttons/Play"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.706
-anchor_top = 0.5
-anchor_right = -0.706
-anchor_bottom = 0.5
-offset_left = 448.48
-offset_top = 368.0
-offset_right = 543.48
-offset_bottom = 399.001
+anchor_left = -0.906
+anchor_top = 0.484
+anchor_right = -0.906
+anchor_bottom = 0.484
+offset_left = 392.0
+offset_top = 384.0
+offset_right = 487.0
+offset_bottom = 415.001
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -518,10 +498,11 @@ size_flags_vertical = 4
 focus_mode = 0
 mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8keen")
+theme_override_styles/hover = ExtResource("4_p76ye")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hsvep")
 text = "Randomize!
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="random_anim" type="AnimationPlayer" parent="mainMenu/Buttons/Play/Randomize"]
 libraries = {
@@ -531,14 +512,14 @@ libraries = {
 [node name="Level Selector" type="Button" parent="mainMenu/Buttons/Play"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 1.7
+anchor_left = 1.894
 anchor_top = 0.484
-anchor_right = 1.7
+anchor_right = 1.894
 anchor_bottom = 0.484
-offset_left = 632.0
-offset_top = 368.512
-offset_right = 727.0
-offset_bottom = 399.513
+offset_left = 768.0
+offset_top = 384.0
+offset_right = 863.0
+offset_bottom = 415.001
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -546,7 +527,7 @@ size_flags_vertical = 4
 focus_mode = 0
 mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8keen")
+theme_override_styles/hover = ExtResource("4_p76ye")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hsvep")
 text = "Select Level"
 
@@ -566,10 +547,10 @@ anchor_left = 0.587
 anchor_top = 0.478
 anchor_right = 0.587
 anchor_bottom = 0.478
-offset_left = -39.36
-offset_top = -16.16
-offset_right = 40.64
-offset_bottom = 15.8396
+offset_left = 712.0
+offset_top = 328.0
+offset_right = 792.0
+offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -594,10 +575,10 @@ anchor_left = 0.406
 anchor_top = 0.478
 anchor_right = 0.406
 anchor_bottom = 0.478
-offset_left = -39.6801
-offset_top = -16.16
-offset_right = 40.3199
-offset_bottom = 15.8396
+offset_left = 480.0
+offset_top = 328.0
+offset_right = 560.0
+offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -622,10 +603,10 @@ anchor_left = 0.5
 anchor_top = 0.622
 anchor_right = 0.5
 anchor_bottom = 0.622
-offset_left = -40.0
-offset_top = -15.84
-offset_right = 40.0
-offset_bottom = 16.1595
+offset_left = 600.0
+offset_top = 432.0
+offset_right = 680.0
+offset_bottom = 464.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -643,6 +624,36 @@ metadata/_edit_use_anchors_ = true
 libraries = {
 "": SubResource("AnimationLibrary_wcu6i")
 }
+
+[node name="Options" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Credits" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="Credits"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -210.0
+offset_right = 320.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("4_p76ye")
+
+[node name="Label" type="Label" parent="Credits/Panel"]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 420.0
+text = "Info not available yet!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="mainMenu/TitlePath/TitleIcon/Title" to="mainMenu/TitlePath/TitleIcon/Title" method="_on_pressed"]
 [connection signal="pressed" from="mainMenu/Buttons/Play" to="mainMenu/Buttons/Play" method="_on_pressed"]
