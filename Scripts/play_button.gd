@@ -10,7 +10,7 @@ func _ready():
 	level_selector.hide()
 	toggle_mode = false
 
-func _on_pressed():
+func play_mode():
 	if !toggle_mode:
 		random_level.visible = true
 		level_selector.visible = true
@@ -20,7 +20,7 @@ func _on_pressed():
 	else:
 		button_courutine()
 		toggle_mode = false
-
+		
 func button_courutine():
 	random_anim.play_backwards("move")
 	level_anim.play_backwards("move")

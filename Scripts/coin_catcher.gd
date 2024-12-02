@@ -3,6 +3,7 @@ extends Node2D
 @onready var time = $UI/Time
 @onready var timer = $Timer
 @onready var spawner = $Spawner
+@onready var count_label = $UI/count_label
 
 var difficulty
 # Called when the node enters the scene tree for the first time.
@@ -34,6 +35,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	time.text = str(int(timer.time_left))
+	count_label.text = " " + str(int(spawner.count))
 	if spawner.count == 0:
 		get_tree().change_scene_to_file("res://Scenes/main.tscn")
 	

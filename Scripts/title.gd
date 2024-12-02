@@ -25,7 +25,7 @@ func title_courutine():
 	await title_anim.animation_finished
 	disabled = false
 
-func _on_pressed():
+func title_btn():
 	if !toggle_mode:
 		play.visible = true
 		options.visible = true
