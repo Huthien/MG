@@ -8,6 +8,24 @@
 ##
 
 <div>
+  <p>Date: 2/12/2024</p>
+  <ul>
+    <li>
+      <p>Added Level Select scene template</p>
+    </li>
+    <li>
+      <p>Main Menu code fixed</p>
+    </li>
+    <li>
+      <p>Coin Catcher level has the coin count in the bottom-left corner of the game, and the difficulty is random for now! 🎮</p>
+    </li>
+    <p>The random difficulty for the coin catcher minigame will we temporary for the normal game mode! But the player will have to pass the level to progress in the minigame. Otherwise, in the "Randomize!" mode, the difficulty will be random every time the game loads this minigame, or other future minigames with level difficulty. I want the game to be dynamic and fun to play, so i will be implementing all the changes needed for achieving that goal!</p>
+  </ul>
+</div>
+
+##
+
+<div>
   <p>Date: 28/11/2024</p>
   <ul>
     <li>
