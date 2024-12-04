@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dt7f2khb4uofg"]
+
+[ext_resource type="StyleBox" uid="uid://cehsiqh5ikuha" path="res://Assets/Styles/btn_normal.tres" id="1_ejp06"]
+[ext_resource type="Script" path="res://Scripts/gui/minigame_btn.gd" id="1_w1shk"]
+[ext_resource type="StyleBox" uid="uid://bupkkb0l1cso" path="res://Assets/Styles/btn_hover.tres" id="2_xtncu"]
+[ext_resource type="StyleBox" uid="uid://b1oycfj32h824" path="res://Assets/Styles/btn_pressed.tres" id="3_4rv7b"]
+
+[node name="Minigame_btn" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_styles/normal = ExtResource("1_ejp06")
+theme_override_styles/hover = ExtResource("2_xtncu")
+theme_override_styles/pressed = ExtResource("3_4rv7b")
+script = ExtResource("1_w1shk")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

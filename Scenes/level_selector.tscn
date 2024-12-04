@@ -1,36 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2wa6mmkcudql"]
+[gd_scene load_steps=3 format=3 uid="uid://b2wa6mmkcudql"]
 
 [ext_resource type="StyleBox" uid="uid://bhd1c1ldemmea" path="res://Assets/Styles/background.tres" id="1_6su0f"]
-[ext_resource type="Script" path="res://Scripts/level_selector.gd" id="1_wj3l3"]
+[ext_resource type="Script" path="res://Scripts/gui/level_selector.gd" id="1_wj3l3"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l28xb"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
-[node name="Level Selector" type="Node2D"]
+[node name="Level Selector" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_wj3l3")
+dir_path = "res://Scenes/Minigames"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Background" type="Panel" parent="CanvasLayer"]
+[node name="Background" type="Panel" parent="."]
 offset_right = 1280.0
 offset_bottom = 720.0
 theme_override_styles/panel = ExtResource("1_6su0f")
 
-[node name="Coin Catcher" type="Button" parent="CanvasLayer"]
-offset_left = 190.0
-offset_top = 132.0
-offset_right = 340.0
-offset_bottom = 192.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_l28xb")
-text = "cc"
-
-[connection signal="pressed" from="CanvasLayer/Coin Catcher" to="." method="_on_cc_pressed"]
+[node name="Grid" type="GridContainer" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 16.0
+offset_bottom = 16.0

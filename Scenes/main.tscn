@@ -1,11 +1,13 @@
 [gd_scene load_steps=37 format=3 uid="uid://d0crrk2wfpalf"]
 
-[ext_resource type="Script" path="res://Scripts/main.gd" id="1_t1b3p"]
-[ext_resource type="Script" path="res://Scripts/play_button.gd" id="2_23wi1"]
+[ext_resource type="Script" path="res://Scripts/gui/main.gd" id="1_t1b3p"]
+[ext_resource type="Script" path="res://Scripts/gui/play_button.gd" id="2_23wi1"]
 [ext_resource type="StyleBox" uid="uid://bhd1c1ldemmea" path="res://Assets/Styles/background.tres" id="2_68nti"]
 [ext_resource type="Texture2D" uid="uid://cibhi0kt8kf05" path="res://MG!_logo_nb.png" id="2_m5xdw"]
-[ext_resource type="Script" path="res://Scripts/title.gd" id="3_8ymd6"]
-[ext_resource type="StyleBox" uid="uid://bdorj6wkg3u71" path="res://Assets/Styles/Indigo_medium.tres" id="4_p76ye"]
+[ext_resource type="Script" path="res://Scripts/gui/title.gd" id="3_8ymd6"]
+[ext_resource type="StyleBox" uid="uid://cehsiqh5ikuha" path="res://Assets/Styles/btn_normal.tres" id="5_0bav2"]
+[ext_resource type="StyleBox" uid="uid://bupkkb0l1cso" path="res://Assets/Styles/btn_hover.tres" id="6_f43nj"]
+[ext_resource type="StyleBox" uid="uid://b1oycfj32h824" path="res://Assets/Styles/btn_pressed.tres" id="7_qpp7i"]
 
 [sub_resource type="Curve2D" id="Curve2D_fns03"]
 _data = {
@@ -125,30 +127,6 @@ _data = {
 "RESET": SubResource("Animation_ao74u"),
 "move": SubResource("Animation_votq0")
 }
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ln8c1"]
-bg_color = Color(0.133333, 0.12549, 0.203922, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 6
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsvep"]
-bg_color = Color(0.333205, 0.432808, 0.834754, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
 
 [sub_resource type="Animation" id="Animation_5gn48"]
 length = 0.001
@@ -460,10 +438,10 @@ anchor_left = 0.5
 anchor_top = 0.356
 anchor_right = 0.5
 anchor_bottom = 0.356
-offset_left = -40.0
-offset_top = -16.32
-offset_right = 40.0
-offset_bottom = 15.6799
+offset_left = 600.0
+offset_top = 240.0
+offset_right = 680.0
+offset_bottom = 272.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(40.0003, 16.0001)
@@ -471,9 +449,9 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_mode = 0
 mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
-theme_override_styles/hover = ExtResource("4_p76ye")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_hsvep")
+theme_override_styles/normal = ExtResource("5_0bav2")
+theme_override_styles/hover = ExtResource("6_f43nj")
+theme_override_styles/pressed = ExtResource("7_qpp7i")
 toggle_mode = true
 action_mode = 0
 keep_pressed_outside = true
@@ -487,19 +465,19 @@ anchor_left = -0.906
 anchor_top = 0.484
 anchor_right = -0.906
 anchor_bottom = 0.484
-offset_left = 464.48
-offset_top = 368.512
-offset_right = 559.48
-offset_bottom = 399.513
+offset_left = 392.0
+offset_top = 384.0
+offset_right = 487.0
+offset_bottom = 415.001
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_mode = 0
 mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
-theme_override_styles/hover = ExtResource("4_p76ye")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_hsvep")
+theme_override_styles/normal = ExtResource("5_0bav2")
+theme_override_styles/hover = ExtResource("6_f43nj")
+theme_override_styles/pressed = ExtResource("7_qpp7i")
 text = "Randomize!
 "
 metadata/_edit_use_anchors_ = true
@@ -516,19 +494,19 @@ anchor_left = 1.894
 anchor_top = 0.484
 anchor_right = 1.894
 anchor_bottom = 0.484
-offset_left = 616.48
-offset_top = 368.512
-offset_right = 711.48
-offset_bottom = 399.513
+offset_left = 768.0
+offset_top = 384.0
+offset_right = 863.0
+offset_bottom = 415.001
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_mode = 0
 mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
-theme_override_styles/hover = ExtResource("4_p76ye")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_hsvep")
+theme_override_styles/normal = ExtResource("5_0bav2")
+theme_override_styles/hover = ExtResource("6_f43nj")
+theme_override_styles/pressed = ExtResource("7_qpp7i")
 text = "Select Level"
 
 [node name="level_anim" type="AnimationPlayer" parent="mainMenu/Buttons/Play/Level Selector"]
@@ -547,17 +525,17 @@ anchor_left = 0.587
 anchor_top = 0.478
 anchor_right = 0.587
 anchor_bottom = 0.478
-offset_left = -39.36
-offset_top = -16.16
-offset_right = 40.64
-offset_bottom = 15.84
+offset_left = 712.0
+offset_top = 328.0
+offset_right = 792.0
+offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_mode = 0
 mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
+theme_override_styles/normal = ExtResource("5_0bav2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sebbp")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vdphn")
 text = "Options
@@ -575,17 +553,17 @@ anchor_left = 0.406
 anchor_top = 0.478
 anchor_right = 0.406
 anchor_bottom = 0.478
-offset_left = -39.68
-offset_top = -16.16
-offset_right = 40.3198
-offset_bottom = 15.84
+offset_left = 480.0
+offset_top = 328.0
+offset_right = 560.0
+offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_mode = 0
 mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
+theme_override_styles/normal = ExtResource("5_0bav2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sebbp")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vdphn")
 text = "Credits
@@ -603,17 +581,17 @@ anchor_left = 0.5
 anchor_top = 0.622
 anchor_right = 0.5
 anchor_bottom = 0.622
-offset_left = -40.0
-offset_top = -15.84
-offset_right = 40.0
-offset_bottom = 16.16
+offset_left = 600.0
+offset_top = 432.0
+offset_right = 680.0
+offset_bottom = 464.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_mode = 0
 mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_ln8c1")
+theme_override_styles/normal = ExtResource("5_0bav2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sebbp")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vdphn")
 text = "Quit
@@ -645,7 +623,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/panel = ExtResource("4_p76ye")
+theme_override_styles/panel = ExtResource("6_f43nj")
 
 [node name="Label" type="Label" parent="Credits/Panel"]
 layout_mode = 0

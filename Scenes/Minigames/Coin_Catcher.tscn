@@ -1,14 +1,120 @@
-[gd_scene load_steps=10 format=3 uid="uid://ckqtnpfdj8x1t"]
+[gd_scene load_steps=25 format=3 uid="uid://ckqtnpfdj8x1t"]
 
-[ext_resource type="Script" path="res://Scripts/coin_catcher.gd" id="1_k6eis"]
-[ext_resource type="Texture2D" uid="uid://cd3bbdeblgsjp" path="res://Assets/MMG-BG.png" id="2_gjfgx"]
-[ext_resource type="PackedScene" uid="uid://kipriljf16q3" path="res://Scenes/player.tscn" id="2_ujskg"]
-[ext_resource type="Script" path="res://Scripts/spawner.gd" id="2_uo7sc"]
-[ext_resource type="PackedScene" uid="uid://dqtg0v2tiojpx" path="res://Scenes/Objects/coin.tscn" id="3_bdkr0"]
-[ext_resource type="Texture2D" uid="uid://cg2xou413urlc" path="res://Assets/block_tile.png" id="3_jv6u0"]
+[ext_resource type="Script" path="res://Scripts/coin_catcher.gd" id="1_kd5rg"]
+[ext_resource type="Texture2D" uid="uid://bbagyqttjxr4f" path="res://Assets/MG-Collectables.png" id="2_jpqjl"]
+[ext_resource type="Texture2D" uid="uid://cd3bbdeblgsjp" path="res://Assets/MMG-BG.png" id="3_knvx5"]
+[ext_resource type="Texture2D" uid="uid://cg2xou413urlc" path="res://Assets/block_tile.png" id="4_qp6x4"]
+[ext_resource type="Script" path="res://Scripts/spawner.gd" id="5_luc5o"]
+[ext_resource type="PackedScene" uid="uid://c7glo0opgjk8q" path="res://Scenes/Objects/player_spawner.tscn" id="6_rp7yu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qw6a"]
+atlas = ExtResource("2_jpqjl")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dc7hr"]
+atlas = ExtResource("2_jpqjl")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebt2e"]
+atlas = ExtResource("2_jpqjl")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qq4a1"]
+atlas = ExtResource("2_jpqjl")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07vo8"]
+atlas = ExtResource("2_jpqjl")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oisfe"]
+atlas = ExtResource("2_jpqjl")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ibcu"]
+atlas = ExtResource("2_jpqjl")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ebor"]
+atlas = ExtResource("2_jpqjl")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oixgv"]
+atlas = ExtResource("2_jpqjl")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3wkk"]
+atlas = ExtResource("2_jpqjl")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdo6v"]
+atlas = ExtResource("2_jpqjl")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o33rv"]
+atlas = ExtResource("2_jpqjl")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfx2f"]
+atlas = ExtResource("2_jpqjl")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7w10"]
+atlas = ExtResource("2_jpqjl")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_thybj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qw6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dc7hr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebt2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qq4a1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07vo8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oisfe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ibcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ebor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oixgv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3wkk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdo6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o33rv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfx2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7w10")
+}],
+"loop": true,
+"name": &"coin",
+"speed": 20.0
+}]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gril5"]
-texture = ExtResource("2_gjfgx")
+texture = ExtResource("3_knvx5")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -39,7 +145,7 @@ texture_region_size = Vector2i(32, 32)
 0:2/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tn0qr"]
-texture = ExtResource("3_jv6u0")
+texture = ExtResource("4_qp6x4")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -53,11 +159,11 @@ sources/0 = SubResource("TileSetAtlasSource_gril5")
 sources/2 = SubResource("TileSetAtlasSource_tn0qr")
 
 [node name="Coin Catcher" type="Node2D"]
-script = ExtResource("1_k6eis")
+script = ExtResource("1_kd5rg")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 30.0
+wait_time = 15.0
 one_shot = true
 autostart = true
 
@@ -77,6 +183,27 @@ theme_override_font_sizes/font_size = 32
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="count_label" type="Label" parent="UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -592.0
+offset_top = 296.0
+offset_right = -544.0
+offset_bottom = 328.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UI/count_label"]
+position = Vector2(-16, 16)
+sprite_frames = SubResource("SpriteFrames_thybj")
+animation = &"coin"
+autoplay = "coin"
+frame_progress = 0.210612
+
 [node name="Tilemap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_dn057")
 format = 2
@@ -85,19 +212,10 @@ layer_0/tile_data = PackedInt32Array(851969, 65536, 1, 917505, 65536, 1, 983041,
 layer_1/name = "CoinSpawn"
 layer_1/tile_data = PackedInt32Array()
 
-[node name="Player" parent="." instance=ExtResource("2_ujskg")]
-position = Vector2(353, 580)
-
-[node name="Coin" parent="." instance=ExtResource("3_bdkr0")]
-position = Vector2(667, 582)
-
-[node name="Coin2" parent="." instance=ExtResource("3_bdkr0")]
-position = Vector2(791, 581)
-
-[node name="Coin3" parent="." instance=ExtResource("3_bdkr0")]
-position = Vector2(546, 580)
-
 [node name="Spawner" type="Node2D" parent="."]
-script = ExtResource("2_uo7sc")
+script = ExtResource("5_luc5o")
+
+[node name="PlayerSpawner" parent="." instance=ExtResource("6_rp7yu")]
+position = Vector2(640, 624)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
