@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg2xou413urlc"
-path="res://.godot/imported/block_tile.png-b0178c345aa24e023917413187971c66.ctex"
+uid="uid://calaj6xyedjql"
+path="res://.godot/imported/MG-BG.png-acda061fada1b963627d7146ad50ccb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/block_tile.png"
-dest_files=["res://.godot/imported/block_tile.png-b0178c345aa24e023917413187971c66.ctex"]
+source_file="res://Assets/Tilesets/MG-BG.png"
+dest_files=["res://.godot/imported/MG-BG.png-acda061fada1b963627d7146ad50ccb0.ctex"]
 
 [params]
 

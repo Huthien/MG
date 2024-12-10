@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://dqtg0v2tiojpx"]
 
-[ext_resource type="Texture2D" uid="uid://bbagyqttjxr4f" path="res://Assets/MG-Collectables.png" id="1_ro88g"]
+[ext_resource type="Texture2D" uid="uid://bbagyqttjxr4f" path="res://Assets/Tilesets/MG-Collectables.png" id="1_ro88g"]
 [ext_resource type="Script" path="res://Scripts/coin.gd" id="1_ttodt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ujjvy"]

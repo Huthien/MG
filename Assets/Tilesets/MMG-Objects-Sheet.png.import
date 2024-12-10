@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://calaj6xyedjql"
-path="res://.godot/imported/MG-BG.png-c7cc5cc3060847daab28519a1154059e.ctex"
+uid="uid://bnxya88a5ny14"
+path="res://.godot/imported/MMG-Objects-Sheet.png-70aa0dc4bd8a0eabea2ad01b43876c2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/MG-BG.png"
-dest_files=["res://.godot/imported/MG-BG.png-c7cc5cc3060847daab28519a1154059e.ctex"]
+source_file="res://Assets/Tilesets/MMG-Objects-Sheet.png"
+dest_files=["res://.godot/imported/MMG-Objects-Sheet.png-70aa0dc4bd8a0eabea2ad01b43876c2f.ctex"]
 
 [params]
 

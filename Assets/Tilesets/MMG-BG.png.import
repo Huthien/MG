@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crb1w05lk6hlp"
-path="res://.godot/imported/MMG-Magnetic_Cage.png-1c69d508e3b1bae4d24af2f3fca06b88.ctex"
+uid="uid://cd3bbdeblgsjp"
+path="res://.godot/imported/MMG-BG.png-55415b8c50431c1ff20c084613ffb932.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/MMG-Magnetic_Cage.png"
-dest_files=["res://.godot/imported/MMG-Magnetic_Cage.png-1c69d508e3b1bae4d24af2f3fca06b88.ctex"]
+source_file="res://Assets/Tilesets/MMG-BG.png"
+dest_files=["res://.godot/imported/MMG-BG.png-55415b8c50431c1ff20c084613ffb932.ctex"]
 
 [params]
 

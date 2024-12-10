@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbagyqttjxr4f"
-path="res://.godot/imported/MG-Collectables.png-772463155a9d1190e1221b897e2fad76.ctex"
+uid="uid://cg2xou413urlc"
+path="res://.godot/imported/block_tile.png-e12f4ae2df1dce0479d198349cb10c58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/MG-Collectables.png"
-dest_files=["res://.godot/imported/MG-Collectables.png-772463155a9d1190e1221b897e2fad76.ctex"]
+source_file="res://Assets/Tilesets/block_tile.png"
+dest_files=["res://.godot/imported/block_tile.png-e12f4ae2df1dce0479d198349cb10c58.ctex"]
 
 [params]
 

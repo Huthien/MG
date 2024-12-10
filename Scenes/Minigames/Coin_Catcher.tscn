@@ -1,9 +1,9 @@
 [gd_scene load_steps=25 format=3 uid="uid://ckqtnpfdj8x1t"]
 
 [ext_resource type="Script" path="res://Scripts/coin_catcher.gd" id="1_kd5rg"]
-[ext_resource type="Texture2D" uid="uid://bbagyqttjxr4f" path="res://Assets/MG-Collectables.png" id="2_jpqjl"]
-[ext_resource type="Texture2D" uid="uid://cd3bbdeblgsjp" path="res://Assets/MMG-BG.png" id="3_knvx5"]
-[ext_resource type="Texture2D" uid="uid://cg2xou413urlc" path="res://Assets/block_tile.png" id="4_qp6x4"]
+[ext_resource type="Texture2D" uid="uid://bbagyqttjxr4f" path="res://Assets/Tilesets/MG-Collectables.png" id="2_jpqjl"]
+[ext_resource type="Texture2D" uid="uid://cd3bbdeblgsjp" path="res://Assets/Tilesets/MMG-BG.png" id="3_knvx5"]
+[ext_resource type="Texture2D" uid="uid://cg2xou413urlc" path="res://Assets/Tilesets/block_tile.png" id="4_qp6x4"]
 [ext_resource type="Script" path="res://Scripts/spawner.gd" id="5_luc5o"]
 [ext_resource type="PackedScene" uid="uid://c7glo0opgjk8q" path="res://Scenes/Objects/player_spawner.tscn" id="6_rp7yu"]
 
